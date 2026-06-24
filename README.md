@@ -17,7 +17,8 @@ A simple Android Unit Converter application developed using Java and XML in Andr
 
 ## Screenshots
 
-<img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/24b5da82-30d2-48a6-86ab-3ddf9e384a59" />
+<img width="710" height="1085" alt="image" src="https://github.com/user-attachments/assets/c70574cf-5b95-46ce-9456-f20d06dead79" />
+
 
 
 ## Author
