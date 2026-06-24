@@ -1,42 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp">
+    android:background="#121212">
 
-    <EditText
-        android:id="@+id/etValue"
+    <LinearLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/enter_value"
-        android:inputType="numberDecimal"
-        android:importantForAutofill="no"/>
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="50dp">
 
-    <Spinner
-        android:id="@+id/spFrom"
+        <!-- Title -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Unit Converter"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="30dp" />
+
+        <!-- Category -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textColor="#AAAAAA"
+            android:textSize="15sp"
+            android:paddingBottom="6dp" />
+
+        <Spinner
+            android:id="@+id/spCategory"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/card_bg" />
+
+        <!-- Value -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Value"
+            android:textColor="#AAAAAA"
+            android:textSize="15sp"
+            android:layout_marginTop="18dp"
+            android:paddingBottom="6dp" />
+
+        <EditText
+            android:id="@+id/etValue"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/card_bg"
+            android:hint="Enter Value"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:inputType="numberDecimal"
+            android:importantForAutofill="no" />
+
+        <!-- From -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From"
+            android:textColor="#AAAAAA"
+            android:textSize="15sp"
+            android:layout_marginTop="18dp"
+            android:paddingBottom="6dp" />
+
+        <Spinner
+            android:id="@+id/spFrom"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/card_bg" />
+
+        <!-- Swap -->
+
+        <Button
+            android:id="@+id/btnSwap"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="14dp"
+            android:text="⇅ SWAP UNITS"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:backgroundTint="#303030" />
+
+        <!-- To -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To"
+            android:textColor="#AAAAAA"
+            android:textSize="15sp"
+            android:layout_marginTop="18dp"
+            android:paddingBottom="6dp" />
+
+        <Spinner
+            android:id="@+id/spTo"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/card_bg" />
+
+        <!-- Convert Button -->
+
+        <Button
+            android:id="@+id/btnConvert"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="24dp"
+            android:text="CONVERT"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:backgroundTint="#FF9500" />
+
+        <Button
+        android:id="@+id/btnClear"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:text="CLEAR"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#444444"/>
+        <!-- Result Card -->
 
-    <Spinner
-        android:id="@+id/spTo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="20dp">
 
-    <Button
-        android:id="@+id/btnConvert"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/convert"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Result"
+                android:textColor="#AAAAAA"
+                android:textSize="15sp" />
 
-    <TextView
-        android:id="@+id/tvResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/result"
-        android:textSize="24sp"
-        android:paddingTop="20dp"/>
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ready"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:lineSpacingExtra="8dp"
+                android:paddingTop="12dp" />
 
-</LinearLayout>
+        </LinearLayout>
+
+        <!-- Footer -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unit Converter v1.0"
+            android:textColor="#666666"
+            android:textSize="28sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="20dp" />
+
+    </LinearLayout>
+
+</ScrollView>
